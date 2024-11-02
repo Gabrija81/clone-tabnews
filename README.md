@@ -54,3 +54,7 @@ Usando codespaces: para tornar a página pública, clicar no ícone da antena na
 >`git push` # empurra as alteraçoes locais para o 'origin' <br>
 >`git push --force` # empurra as alteraçoes de forma forçada <br>
 >`git push -f` # mesmo que o anterior <br>
+
+## Deploy usando Vercel
+https://vercel.com/
+
