@@ -69,7 +69,7 @@ adicionar extenção 'Prettier'
 >
 > adicionar scripts em 'package.json':<br>
 >
-> > `"lint:check": "prettier --check ."`<br> >>`"lint:fix": "prettier --write ."`<br>
+> > `"lint:check": "prettier --check ."`<br> > > `"lint:fix": "prettier --write ."`<br>
 >
 > rodar os comandos com `npm run lint:check` para conferir<br>
 > e `npm run lint:fix` para reescrever<br>
@@ -80,3 +80,7 @@ adicionar extenção 'Prettier'
 > habilitar 'format on save'<br>
 > e desabilitar 'auto save' para no futuro não<br>
 > conflitar com testes automatizados<br>
+> pode acontecer do `lint:fix` do Prettier não ignorar a<br>
+> pasta '.next'<br>
+> é necessário adicionar um arquivo '.prettierignore' com<br>
+> a pasta especicada declarada<br>
