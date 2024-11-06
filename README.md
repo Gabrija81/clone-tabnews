@@ -14,7 +14,7 @@ criar arquivo '.nvmrc' com `lts/hydrogen` e **uma quebra de linha**, para rodar 
 
 Criar o arquivo 'package.json' usando `npm init` no terminal
 
-lcença: MIT
+licença: MIT
 
 ## Next.js
 
@@ -84,3 +84,29 @@ adicionar extenção 'Prettier'
 > pasta '.next'<br>
 > é necessário adicionar um arquivo '.prettierignore' com<br>
 > a pasta especicada declarada<br>
+
+## DNS
+
+nic.br<br>
+whatsmydns.net<br>
+`sudo apt install dnsutils`<br>
+`dig curso.dev A` # A: endereço; TXT: texto; NS: nameserver; AAAA: IPv6; MX: mail exchanger; SOA: start of authority<br>
+`dig curso.dev TXT +trace` # caminho<br>
+
+Registrar um domínio em [registro.br](https://registro.br). No site da Vercel em 'Domains' usar 'add Existing' e salvar o dominio no projeto. Nesse caso vamos usar os 'Nameservers' da Vercel e adicioná-los na sua conta no domínio em DNS. Isso deve levar 2h para concluir.
+
+## Arquitetura e Pastas
+📦 root<br>
+┣ 📂 pages<br>
+┃ ┗ 📜 index.js<br>
+┣ 📂 models<br>
+┃ ┣ 📜 user.js<br>
+┃ ┣ 📜 content.js<br>
+┃ ┗ 📜 password.js<br>
+┣ 📂 infra<br>
+┃ ┗ 📜 database.js<br>
+┃ ┣ 📂 migrations<br>
+┃ ┣ 📂 provisioning<br>
+┃ ┃ ┣ 📂 staging<br>
+┃ ┃ ┣ 📂 production<br>
+┣ 📂 tests<br>
