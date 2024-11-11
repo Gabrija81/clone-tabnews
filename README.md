@@ -4,7 +4,10 @@ treinamento de programação no curso.dev do Filipe Deschamps
 
 ## Node.js
 
-> `node -v` # mostra a versão atual<br> >`nvm ls` # lista as versões disponíveis<br> >`nvm install lts/hydrogen` # instala a versão especificada<br> >`nvm alias default lts/hydrogen` # aponta a versão padrão<br>
+> `node -v` # mostra a versão atual<br>
+>`nvm ls` # lista as versões disponíveis<br>
+>`nvm install lts/hydrogen` # instala a versão especificada<br>
+>`nvm alias default lts/hydrogen` # aponta a versão padrão<br>
 
 criar arquivo '.nvmrc' com `lts/hydrogen` e **uma quebra de linha**, para rodar o commando `nvm install` e instalar a versão especificada dentro do arquivo
 
@@ -23,7 +26,8 @@ já é inserido no arquivo 'package.json'
 
 ## React.js
 
-> `npm install react@18.2.0`<br> >`npm install react-dom@18.2.0`<br>
+> `npm install react@18.2.0`<br>
+>`npm install react-dom@18.2.0`<br>
 > react-dom é um renderizador HTML
 
 levantando o servidor web: `next dev` no terminal
@@ -45,7 +49,19 @@ Usando codespaces: para tornar a página pública, clicar no ícone da antena na
 
 ## Git
 
-> `git log` # registro<br> >`git log --stat` # registro com detalhes<br> >`git log --oneline` # registro resumido<br> >`git status` # mostra o status do projeto<br> >`git diff` # mostra a diferença entre as versões<br> >`git add nome_do_arquivoou_pasta` # adiciona ao status staged<br> >`git commit` # se compromete!<br> >`git commit --amend` # substitui o último commit com o atual<br> >`git commit -m "mensagem"` # atalho para fazer novos commits<br> >`git push` # empurra as alteraçoes locais para o 'origin'<br> >`git push --force` # empurra as alteraçoes de forma forçada<br> >`git push -f` # mesmo que o anterior<br> >`git add -A` # adiciona todos os arquivos alterados para staged<br>
+> `git log` # registro<br>
+>`git log --stat` # registro com detalhes<br>
+>`git log --oneline` # registro resumido<br>
+>`git status` # mostra o status do projeto<br>
+>`git diff` # mostra a diferença entre as versões<br>
+>`git add nome_do_arquivoou_pasta` # adiciona ao status staged<br>
+>`git commit` # se compromete!<br>
+>`git commit --amend` # substitui o último commit com o atual<br>
+>`git commit -m "mensagem"` # atalho para fazer novos commits<br>
+>`git push` # empurra as alteraçoes locais para o 'origin'<br>
+>`git push --force` # empurra as alteraçoes de forma forçada<br>
+>`git push -f` # mesmo que o anterior<br>
+>`git add -A` # adiciona todos os arquivos alterados para staged<br>
 
 ## Deploy usando Vercel
 
@@ -55,11 +71,13 @@ https://vercel.com/
 
 adicionar extensão 'EditorConfig'
 
-> criar um arquivo '.editorconfig' com as configurações:
+> criar um arquivo '.editorconfig' com as configurações:<br>
 >
 > > `root = true` # mostra para o VSCode onde parar de procurar o arquivo<br>
 > >
-> > `[*]` # tipos de arquivo para formatar (\* == todos)<br> >>`indent_style = space`<br> >>`indent_size = 2` # indentação recomendada para javascript<br>
+> > `[*]` # tipos de arquivo para formatar (\* == todos)<br>
+> >`indent_style = space`<br>
+> >`indent_size = 2` # indentação recomendada para javascript<br>
 
 adicionar extenção 'Prettier'
 
@@ -69,7 +87,8 @@ adicionar extenção 'Prettier'
 >
 > adicionar scripts em 'package.json':<br>
 >
-> > `"lint:check": "prettier --check ."`<br> > > `"lint:fix": "prettier --write ."`<br>
+> > `"lint:check": "prettier --check ."`<br>
+> > `"lint:fix": "prettier --write ."`<br>
 >
 > rodar os comandos com `npm run lint:check` para conferir<br>
 > e `npm run lint:fix` para reescrever<br>
@@ -96,6 +115,7 @@ whatsmydns.net<br>
 Registrar um domínio em [registro.br](https://registro.br). No site da Vercel em 'Domains' usar 'add Existing' e salvar o dominio no projeto. Nesse caso vamos usar os 'Nameservers' da Vercel e adicioná-los na sua conta no domínio em DNS. Isso deve levar 2h para concluir.
 
 ## Arquitetura e Pastas
+
 📦 root<br>
 ┣ 📂 pages<br>
 ┃ ┗ 📜 index.js<br>
@@ -110,3 +130,20 @@ Registrar um domínio em [registro.br](https://registro.br). No site da Vercel e
 ┃ ┃ ┣ 📂 staging<br>
 ┃ ┃ ┣ 📂 production<br>
 ┣ 📂 tests<br>
+
+## Testes
+
+`"jest": "^29.6.2"`<br>
+`"test": "jest"`<br>
+`"test:watch": "jest --watch"`<br>
+
+## Docker
+
+`"postgres:16.4-alpine3.19"` (11-nov-2024)<br>
+`docker compose up`<br>
+`docker compose --file infra/compose.yaml up`<br>
+`docker compose down`<br>
+`docker ps --all` lista todas as imagens rodando<br>
+`docker compose up --detach --force-recreate` força recriar a imagem sem usar 'down'<br>
+
+`psql --hot=localhost --username=postgres --port:5432` psql é o client postgres<br>
